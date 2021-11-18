@@ -1,88 +1,72 @@
-![Kamyroll_Plugin](/resources/Kamyroll_plugin.png)
-![app workflow](https://github.com/hyugogirubato/Kamyroll-Python/workflows/main/badge.svg)
+![Kamyroll_Plugin](/resources/Kamyroll_plugin.png)  
 
 ## Description
-Il s'agit d'un plugin fournissant deions avancer au script [Kamyroll-Python](https://github.com/hyugogirubato/Kamyroll-Python) afin de 
+This is a plugin providing options to advance to the [Kamyroll-Python](https://github.com/hyugogirubato/Kamyroll-Python) script in order to increase the potential of the original script.
  
 ## Features
-- Download videos in all resolutions
-- Download subtitles in all languages
-- Search for videos
-- Compatible with or free or premium account
-- Use a proxy to unblock the entire catalog
+- Connexion avec son compte
+- Country bypass
+- Premium bypass
 - Available for all platforms (macOS, Windows, Linux, etc.)
-- Download all available episodes and movies
-- Videos in mp4, mkv with or without Hardsub
-- Download episodes by interval or number (bash download)
 
 ## Requirements
-- [ffmpeg](https://www.ffmpeg.org)
 - [Python](https://www.python.org/downloads) 3+
 
-### Installation
-```bash
-pip install kamyroll_python
-```
-
 ## Information
- - To use the script log in with your email or username and your Crunchyroll password.
- - Configure your configuration file according to your preferences.
- - If you don't have Python, you can use the compiler version for Windows.
+ - The script provides a secure proxy for using the country bypass.
+ - The generated data is saved directly in the kamyroll.json file.
+ - Using the program requires generating the kamyroll.json file with the main script.
+ - If the execution of the script ends without error or message, the data has been saved.
+ - The country argument is can be used with the bypass and your account.
+ - The country argument defaults to your location (no proxy generated).
 
-## Preferences
+| Code | Country |
+| ------------ | ------------ | 
+| at | Argentina |
+| at | Austria |
+| au | Australia |
+| be | Belgium |
+| bg | Bulgaria |
+| br | Brazil |
+| ca | Canada |
+| ch | Switzerland |
+| cl | Chile |
+| co | Colombia |
+| cz | Czech Republic |
+| de | Germany |
+| dk | Denmark |
+| es | Spain |
+| fi | Finland |
+| fr | France |
+| gb | United Kingdom (Great Britain) |
+| gr | Greece |
+| hk | Hong Kong |
+| hr | Croatia |
+| hu | Hungary |
+| id | Indonesia |
+| ie | Ireland |
+| il | Israel |
+| in | India |
+| is | Iceland |
+| it | Italy |
+| jp | Japan |
+| kr | Korea, Republic of |
+| mx | Mexico |
+| nl | Netherlands |
+| no | Norway |
+| nz | New Zealand |
+| pl | Poland |
+| ro | Romania |
+| ru | Russian Federation |
+| se | Sweden |
+| sg | Singapore |
+| sk | Slovakia |
+| tr | Turkey |
+| uk | United Kingdom |
+| us | United States of America |
 
-#### Video resolution
 
-Resolution | Quality
------------- | -------------
-"1080" | FHD
-"720" | HD
-"480" | SD
-"360" | SD
-"240" | SD
-
-#### Playlist selection
-
-Resolution | Quality
------------- | -------------
-"[3:]" | Take all episodes after 3
-"[2:4]" | Take episodes 2 to 4 included
-"[-2]" | Take the penultimate episode from the list
-"[-2:]" | Take all the last episode from the penultimate
-"[:-2]" | Take all episodes except the last 2
-"8" | Take episode 8
-
-#### Subtitle language 
-
-Language | Title
------------- | -------------
-"" | Without subtitles
-"en-US" | English (US)
-"en-GB" | English (UK)
-"es-419" | Español
-"es-ES" | Español (España)
-"pt-BR" |Português (Brasil)
-"pt-PT" | Português (Portugal)
-"fr-FR" | Français (France)
-"de-DE" | Deutsch
-"ar-SA" | العربية
-"it-IT" | Italiano
-"ru-RU" | Русский
-
-## Proxy configuration
-Secure proxy compatible with Crunchyroll: https://github.com/Snawoot/hola-proxy
-![proxy_example](/Presentation/img_proxy.png)
-
-#### Command
-- RED: Selected region
-  
-#### Proxy in $HOME/.config/kamyroll.json
-- GREEN: uuid
-- BLUE: agent\_key
-- PURPLE: host
-- YELLOW: port
-
-## Examples
+## Arguments
 
 ### Login with ID
 ```
@@ -93,72 +77,22 @@ or
 kamyroll -l "MAIL:PASSWORD"
 ```
 
-### Login with configured ID
+### Premium bypass
 ```
-kamyroll --connect
-```
-or
-```
-kamyroll -c
-```
-
-### Search a series, films, episode
-```
-kamyroll --search "QUERY"
-```
-
-### Show seasons of a series
-```
-kamyroll --season "SERIES_ID"
+kamyroll --bypass
 ```
 or
 ```
-kamyroll -s "SERIES_ID"
+kamyroll -b
 ```
 
-### Show episodes of a season
+### Country bypass
 ```
-kamyroll --episode "SEASON_ID"
+kamyroll --country "COUNTRY_CODE"
 ```
 or
 ```
-kamyroll -e "SEASON_ID"
-```
-
-### Show movies from a movie list
-```
-kamyroll --movie "MOVIE_ID"
-```
-or
-```
-kamyroll -m "MOVIE_ID"
-```
-
-### Download an episode or movie
-```
-kamyroll --download "EPISODE_ID or MOVIE_ID"
-```
-or
-```
-kamyroll -d "EPISODE_ID or MOVIE_ID"
-```
-
-### Download playlist (bash download)
-```
-kamyroll --download "SEASON_ID" --playlist "[START:END]"
-```
-or
-```
-kamyroll -d "SEASON_ID" -p "[START:END]"
-```
-
-### Get the video stream link (m3u8)
-```
-kamyroll --url "EPISODE_ID or MOVIE_ID"
-```
-or
-```
-kamyroll -u "EPISODE_ID or MOVIE_ID"
+kamyroll -c "COUNTRY_CODE"
 ```
 
 ---
