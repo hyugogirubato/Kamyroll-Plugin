@@ -20,6 +20,7 @@ This is a plugin providing options to advance to the [Kamyroll-Python](https://g
  - The country argument is can be used with the bypass and your account.
  - The country argument defaults to your location (no proxy generated).
 
+## List of available regions
 | Code | Country |
 | ------------ | ------------ | 
 | at | Argentina |
