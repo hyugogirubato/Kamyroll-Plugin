@@ -70,29 +70,20 @@ This is a plugin providing options to advance to the [Kamyroll-Python](https://g
 ## Arguments
 
 ### Login with ID
-```
+```bash
 kamyroll --login "MAIL:PASSWORD"
-```
-or
-```
 kamyroll -l "MAIL:PASSWORD"
 ```
 
 ### Premium bypass
-```
+```bash
 kamyroll --bypass
-```
-or
-```
 kamyroll -b
 ```
 
 ### Country bypass
-```
+```bash
 kamyroll --country "COUNTRY_CODE"
-```
-or
-```
 kamyroll -c "COUNTRY_CODE"
 ```
 
