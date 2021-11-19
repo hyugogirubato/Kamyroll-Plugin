@@ -1,7 +1,7 @@
 ![Kamyroll_Plugin](/resources/Kamyroll_plugin.png)  
 
 ## Description
-This is a plugin providing options to advance to the [Kamyroll-Python](https://github.com/hyugogirubato/Kamyroll-Python) script in order to increase the potential of the original script.
+This is a plugin providing options to enhance the [Kamyroll-Python](https://github.com/hyugogirubato/Kamyroll-Python) script in order to increase the potential of the original script.
  
 ## Features
 - Connexion avec son compte
