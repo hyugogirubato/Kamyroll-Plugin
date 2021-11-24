@@ -2,16 +2,17 @@
 """
 Script: Kamyroll-Pyhton
 Plugin: Identifier
-Version: v2021.11.16
+Version: v2021.11.23
 """
 
 import argparse
 import json
+import os.path
 from datetime import datetime
 import requests
-from xdg import BaseDirectory
+import sys
 
-CONFIG_FILE = 'kamyroll.json'
+CONFIG_FILE = 'config.json'
 
 
 def get_login_form(args_login):
@@ -21,19 +22,18 @@ def get_login_form(args_login):
         return username, password
     except Exception:
         print('ERROR: Invalid login form.')
-        exit(1)
+        sys.exit(1)
 
 
 def get_config():
-    config_path = BaseDirectory.load_first_config(CONFIG_FILE)
-    if config_path:
-        file = open(config_path, 'r')
+    if os.path.exists(CONFIG_FILE):
+        file = open(CONFIG_FILE, 'r')
         config = json.load(file)
         file.close()
         return config
     else:
         print('ERROR: Configuration file not found.')
-        exit(1)
+        sys.exit(1)
 
 
 def get_user_key(json_r, key):
@@ -44,8 +44,7 @@ def get_user_key(json_r, key):
 
 
 def save_config(config):
-    config_path = BaseDirectory.load_first_config(CONFIG_FILE)
-    file = open(config_path, 'w', encoding='utf-8')
+    file = open(CONFIG_FILE, 'w', encoding='utf-8')
     file.write(json.dumps(config, indent=4, sort_keys=False, ensure_ascii=False))
     file.close()
 
@@ -55,7 +54,7 @@ def get_proxy_key(json_r, key):
         return json_r.get('data').get('proxy').get(key)
     else:
         print('ERROR: Proxy initialization error.')
-        exit(1)
+        sys.exit(1)
 
 
 def get_expires():
@@ -78,7 +77,7 @@ def main():
 
     if not args.login and not args.bypass:
         print('ERROR: Login with a mandatory session.')
-        exit(1)
+        sys.exit(1)
 
     params = {'platform': 'mobile', 'bypass': args.bypass}
     if args.country:
@@ -118,10 +117,10 @@ def main():
             json_config.get('preferences').get('proxy')['port'] = get_proxy_key(json_r, 'port')
         save_config(json_config)
         print('[debug] Session generation completed.')
-        exit(0)
+        sys.exit(0)
     else:
         print('ERROR: Impossible to connect.')
-        exit(1)
+        sys.exit(1)
 
 
 if __name__ == '__main__':
