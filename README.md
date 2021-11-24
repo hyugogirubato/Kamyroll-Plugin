@@ -93,5 +93,5 @@ kamyroll -c "COUNTRY_CODE"
 ```
 
 ---
-*This script was created by the __Nashi Team__.  
+*This script was created by the [__Nashi Team__](https://github.com/hyugogirubato).  
 Find us on [discord](https://discord.com/invite/g6JzYbh) for more information on projects in development.*
