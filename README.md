@@ -12,6 +12,11 @@ This is a plugin providing options to enhance the [Kamyroll-Python](https://gith
 ## Requirements
 - [Python](https://www.python.org/downloads) 3+
 
+### Installation
+```bash
+pip install -r requirements.txt
+```
+
 ## Information
  - The script provides a secure proxy for using the country bypass.
  - The generated data is saved directly in the kamyroll.json file.
@@ -88,5 +93,5 @@ kamyroll -c "COUNTRY_CODE"
 ```
 
 ---
-*This script was created by the [__Nashi Team__](https://sites.google.com/view/kamyroll/home).  
+*This script was created by the __Nashi Team__.  
 Find us on [discord](https://discord.com/invite/g6JzYbh) for more information on projects in development.*
