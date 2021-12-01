@@ -76,20 +76,20 @@ pip install -r requirements.txt
 
 ### Login with ID
 ```bash
-kamyroll --login "MAIL:PASSWORD"
-kamyroll -l "MAIL:PASSWORD"
+identifier --login "MAIL:PASSWORD"
+identifier -l "MAIL:PASSWORD"
 ```
 
 ### Premium bypass
 ```bash
-kamyroll --bypass
-kamyroll -b
+identifier --bypass
+identifier -b
 ```
 
 ### Country bypass
 ```bash
-kamyroll --country "COUNTRY_CODE"
-kamyroll -c "COUNTRY_CODE"
+identifier --country "COUNTRY_CODE"
+identifier -c "COUNTRY_CODE"
 ```
 
 ---
